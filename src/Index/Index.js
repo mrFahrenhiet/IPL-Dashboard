@@ -151,8 +151,8 @@ export default class Index extends React.Component {
           routes={routes}
           activeColor={this.state.activeColor}
           logo={{
-            outterLink: "#",
-            text: "Project",
+            outterLink: "/index/dashboard",
+            text: "IPL Dashboard",
             imgSrc: logo
           }}
           closeSidebar={this.closeSidebar}

@@ -1,6 +1,6 @@
 const data = require("../data/data.json");
 
-let teams = [];
+const teams = [];
 for(let itm in data) {
     if(teams.indexOf(data[itm].team1)===-1) {
         teams.push(data[itm].team1);
@@ -66,15 +66,25 @@ for(let i in data) {
 seasons.forEach(s=>{
   seasMatch.push(seasonsMatches[s]);
 });
-// teamsWinDifferentCity = {}
-// teams.forEach(team=>{
-//   tea
-// })
+
+let dl = {};
+for(let i in data) {
+  if(dl[data[i]["season"]]===undefined || isNaN(dl[data[i]["season"]]))
+    dl[data[i]["season"]] = 0;
+  else 
+    dl[data[i]["season"]]++
+}
+let ld = [];
+seasons.forEach(s=>{
+  ld.push(dl[s]);
+});
 
 
 
 
-let chart_1_2_3_options = {
+
+
+const chart_1_2_3_options = {
   maintainAspectRatio: false,
   legend: {
     display: false
@@ -123,7 +133,7 @@ let chart_1_2_3_options = {
     ]
   }
 };
-let chart1 = {};
+const chart1 = {};
 teams.forEach(x=>{
   chart1["data"+x] = (canvas) => {
       let ctx = canvas.getContext("2d");
@@ -158,7 +168,7 @@ teams.forEach(x=>{
 });
 chart1["options"] = chart_1_2_3_options
 
-let chart2 = {
+const chart2 = {
   data: canvas => {
     let ctx = canvas.getContext("2d");
 
@@ -234,7 +244,7 @@ let chart2 = {
   }
 };
 
-let chart3 = {
+const chart3 = {
   data: {
     labels: seasons,
     datasets: [
@@ -311,7 +321,7 @@ let chart3 = {
   }
 };
 
-let chart4 = {
+const chart4 = {
   data: {
     labels: seasons,
     datasets: [
@@ -371,11 +381,153 @@ let chart4 = {
     }
   }
 };
+
+
+const chart5 = {
+  data: canvas => {
+    let ctx = canvas.getContext("2d");
+    var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+    gradientStroke.addColorStop(1, "rgba(253,93,147,0.2)");
+    gradientStroke.addColorStop(0, "rgba(253,93,147,0)");
+    return {
+      labels: ["CSK", "DC", "DD", "GL", "KXIP", "KTK","KKR","MI","PW","RR","RPS","RCB","SRH"],
+      datasets: [
+        {
+          label: "Chances of winning",
+          fill: true,
+          backgroundColor: gradientStroke,
+          hoverBackgroundColor: gradientStroke,
+          borderColor: "#ff5991",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          data: [32.5, 25.3, 23.2, 33.33, 18.3, 28.5, 29.99, 31.16, 0.06, 29.3, 26.6, 22.4, 21.6]
+        }
+      ]
+    };
+  },
+  options: {
+    maintainAspectRatio: false,
+    legend: {
+      display: false
+    },
+    tooltips: {
+      backgroundColor: "#f5f5f5",
+      titleFontColor: "#333",
+      bodyFontColor: "#666",
+      bodySpacing: 4,
+      xPadding: 12,
+      mode: "nearest",
+      intersect: 0,
+      position: "nearest"
+    },
+    responsive: true,
+    scales: {
+      yAxes: [
+        {
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(253,93,147,0.1)",
+            zeroLineColor: "transparent"
+          },
+          ticks: {
+            suggestedMin: 0,
+            suggestedMax: 35,
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
+        }
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(253,93,147,0.1)",
+            zeroLineColor: "transparent"
+          },
+          ticks: {
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
+        }
+      ]
+    }
+  }
+};
+
+const chart6 = {
+  data: {
+    labels: seasons,
+    datasets: [
+      {
+        label: "DLS method applied ",
+        fill: true,
+        backgroundColor: "#ff8a76",
+        hoverBackgroundColor: " #ff8a76",
+        borderColor: "#ff8a76",
+        borderWidth: 2,
+        borderDash: [],
+        borderDashOffset: 0.0,
+        data: ld
+      },
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    legend: {
+      display: false
+    },
+    tooltips: {
+      backgroundColor: "#f5f5f5",
+      titleFontColor: "#333",
+      bodyFontColor: "#666",
+      bodySpacing: 4,
+      xPadding: 15,
+      mode: "nearest",
+      intersect: 0,
+      position: "nearest"
+    },
+    responsive: true,
+    scales: {
+      yAxes: [
+        {
+          
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(29,140,248,0.1)",
+            zeroLineColor: "transparent"
+          },
+          ticks: {
+            suggestedMin: 10,
+            suggestedMax: 90,
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
+        }
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            drawBorder: false,
+            color: "rgba(29,140,248,0.1)",
+            zeroLineColor: "transparent"
+          },
+          ticks: {
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
+        }
+      ]
+    }
+  }
+};
 export {
   chart1,
   teams,
   chart3,
   chart2,
-  chart4
+  chart4,
+  chart5,
+  chart6
 };
   

@@ -1,21 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
-// javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
 import { Nav, Collapse } from "reactstrap";
 
-var ps;
+let ps;
 
-class Sidebar extends React.Component {
+export default class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.getCollapseStates(props.routes);
   }
-  // this creates the intial state of this component based on the collapse routes
-  // that it gets through this.props.routes
   getCollapseStates = routes => {
     let initialState = {};
     routes.map((prop, key) => {
@@ -30,19 +27,7 @@ class Sidebar extends React.Component {
     });
     return initialState;
   };
-  // this verifies if any of the collapses should be default opened on a rerender of this component
-  // for example, on the refresh of the page,
-  // while on the src/views/forms/RegularForms.js - route /admin/regular-forms
-  getCollapseInitialState(routes) {
-    for (let i = 0; i < routes.length; i++) {
-      if (routes[i].collapse && this.getCollapseInitialState(routes[i].views)) {
-        return true;
-      } else if (window.location.href.indexOf(routes[i].path) !== -1) {
-        return true;
-      }
-    }
-    return false;
-  }
+
   // this function creates the links and collapses that appear in the sidebar (left menu)
   createLinks = routes => {
     const { rtlActive } = this.props;
@@ -125,7 +110,6 @@ class Sidebar extends React.Component {
     return this.props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
   componentDidMount() {
-    // if you are using a Windows Machine, the scrollbars will have a Mac look
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(this.refs.sidebar, {
         suppressScrollX: true,
@@ -134,8 +118,6 @@ class Sidebar extends React.Component {
     }
   }
   componentWillUnmount() {
-    // we need to destroy the false scrollbar when we navigate
-    // to a page that doesn't have this component rendered
     if (navigator.platform.indexOf("Win") > -1) {
       ps.destroy();
     }
@@ -206,25 +188,3 @@ class Sidebar extends React.Component {
     );
   }
 }
-
-Sidebar.propTypes = {
-  activeColor: PropTypes.oneOf(["primary", "blue", "green", "orange", "red"]),
-  rtlActive: PropTypes.bool,
-  routes: PropTypes.array.isRequired,
-  logo: PropTypes.oneOfType([
-    PropTypes.shape({
-      innerLink: PropTypes.string.isRequired,
-      imgSrc: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
-    }),
-    PropTypes.shape({
-      outterLink: PropTypes.string.isRequired,
-      imgSrc: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired
-    })
-  ]),
-  // this is used on responsive to close the sidebar on route navigation
-  closeSidebar: PropTypes.func
-};
-
-export default Sidebar;
