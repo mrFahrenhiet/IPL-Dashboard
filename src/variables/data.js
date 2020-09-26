@@ -462,8 +462,8 @@ const chart6 = {
       {
         label: "DLS method applied ",
         fill: true,
-        backgroundColor: "#ff8a76",
-        hoverBackgroundColor: " #ff8a76",
+        backgroundColor: "rgba(255, 138, 118,0.1)",
+        hoverBackgroundColor: "rgba(255, 138, 118,0.0)",
         borderColor: "#ff8a76",
         borderWidth: 2,
         borderDash: [],

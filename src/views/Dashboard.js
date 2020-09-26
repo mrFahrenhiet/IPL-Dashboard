@@ -28,6 +28,7 @@ import {
   chart6
 } from "variables/data.js";
 
+import {facts} from "data/facts.js";
 
 
 class Dashboard extends React.Component {
@@ -78,7 +79,7 @@ class Dashboard extends React.Component {
                         >
                           <input defaultChecked name="options" type="radio" />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            {x.split(' ')[0][0]+x.split(' ')[1][0]}
+                            {x.split(' ')[0]}
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-single-02" />
@@ -111,7 +112,7 @@ class Dashboard extends React.Component {
                     </Col>
                     <Col xs="7">
                       <div className="numbers">
-                        <p className="card-category">Chances of wining after fielding first:</p>
+                        <p className="card-category">Chances of wining after batting second:</p>
                         <CardTitle tag="h3">62%</CardTitle>
                       </div>
                     </Col>
@@ -174,7 +175,7 @@ class Dashboard extends React.Component {
                     </Col>
                     <Col xs="7">
                       <div className="numbers">
-                        <p className="card-category">Most Popular Stadium in IPL:</p>
+                        <p className="card-category">Most Popular Stadium (According to number of matches):</p>
                         <CardTitle tag="h4">M Chinnaswamy Stadium</CardTitle>
                       </div>
                     </Col>
@@ -248,7 +249,7 @@ class Dashboard extends React.Component {
                 <Card className="card-chart">
                   <CardHeader>
                     <CardTitle tag="h4">
-                      <i className="tim-icons icon-send text-success" /> Number of times DLS method was applied
+                      <i className="tim-icons icon-cloud-download-93 text-danger" /> Number of times DLS method was applied
                     </CardTitle>
                   </CardHeader>
                   <CardBody>
@@ -263,236 +264,34 @@ class Dashboard extends React.Component {
             </Col>
             </Row>
           <Row>
-            {/* <Col lg="5">
+            <Col lg="5">
               <Card className="card-tasks">
                 <CardHeader>
-                  <h6 className="title d-inline">Sample</h6>
-                  <p className="card-category d-inline">Sample</p>
+                  <CardTitle tag="h4">
+                    Random Facts About IPL <i className="tim-icons icon-sound-wave text-info"></i></CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div className="table-full-width table-responsive">
                     <Table>
                       <tbody>
-                        <tr>
-                          <td>
-                            <FormGroup check>
-                              <Label check>
-                                <Input defaultValue="" type="checkbox" />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td>
-                            <p className="title">Update the Documentation</p>
-                            <p className="text-muted">
-                              Dwuamish Head, Seattle, WA 8:47 AM
-                            </p>
-                          </td>
-                          <td className="td-actions text-right">
-                            <Button
-                              color="link"
-                              id="tooltip786630859"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-pencil" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip786630859"
-                            >
-                              Edit Task
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <FormGroup check>
-                              <Label check>
-                                <Input
-                                  defaultChecked
-                                  defaultValue=""
-                                  type="checkbox"
-                                />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td>
-                            <p className="title">GDPR Compliance</p>
-                            <p className="text-muted">
-                              The GDPR is a regulation that requires businesses
-                              to protect the personal data and privacy of Europe
-                              citizens for transactions that occur within EU
-                              member states.
-                            </p>
-                          </td>
-                          <td className="td-actions text-right">
-                            <Button
-                              color="link"
-                              id="tooltip155151810"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-pencil" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip155151810"
-                            >
-                              Edit Task
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <FormGroup check>
-                              <Label check>
-                                <Input defaultValue="" type="checkbox" />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td>
-                            <p className="title">Solve the issues</p>
-                            <p className="text-muted">
-                              Fifty percent of all respondents said they would
-                              be more likely to shop at a company
-                            </p>
-                          </td>
-                          <td className="td-actions text-right">
-                            <Button
-                              color="link"
-                              id="tooltip199559448"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-pencil" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip199559448"
-                            >
-                              Edit Task
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <FormGroup check>
-                              <Label check>
-                                <Input defaultValue="" type="checkbox" />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td>
-                            <p className="title">Release v2.0.0</p>
-                            <p className="text-muted">
-                              Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM
-                            </p>
-                          </td>
-                          <td className="td-actions text-right">
-                            <Button
-                              color="link"
-                              id="tooltip989676508"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-pencil" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip989676508"
-                            >
-                              Edit Task
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <FormGroup check>
-                              <Label check>
-                                <Input defaultValue="" type="checkbox" />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td>
-                            <p className="title">Export the processed files</p>
-                            <p className="text-muted">
-                              The report also shows that consumers will not
-                              easily forgive a company once a breach exposing
-                              their personal data occurs.
-                            </p>
-                          </td>
-                          <td className="td-actions text-right">
-                            <Button
-                              color="link"
-                              id="tooltip557118868"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-pencil" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip557118868"
-                            >
-                              Edit Task
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <FormGroup check>
-                              <Label check>
-                                <Input defaultValue="" type="checkbox" />
-                                <span className="form-check-sign">
-                                  <span className="check" />
-                                </span>
-                              </Label>
-                            </FormGroup>
-                          </td>
-                          <td>
-                            <p className="title">Arival at export process</p>
-                            <p className="text-muted">
-                              Capitol Hill, Seattle, WA 12:34 AM
-                            </p>
-                          </td>
-                          <td className="td-actions text-right">
-                            <Button
-                              color="link"
-                              id="tooltip143185858"
-                              title=""
-                              type="button"
-                            >
-                              <i className="tim-icons icon-pencil" />
-                            </Button>
-                            <UncontrolledTooltip
-                              delay={0}
-                              target="tooltip143185858"
-                            >
-                              Edit Task
-                            </UncontrolledTooltip>
-                          </td>
-                        </tr>
+                        {facts.map(f=>{
+                          return (
+                            <tr>
+                              <td>
+                                <p className="title">{f.title}</p>
+                                <p className="text-muted">
+                                  {f.text}
+                                </p>
+                              </td>
+                            </tr>
+                          )
+                        })}
                       </tbody>
                     </Table>
                   </div>
                 </CardBody>
               </Card>
-            </Col> */}
+            </Col>
             <Col lg="7">
               <Card>
                 <CardHeader>
