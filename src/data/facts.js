@@ -28,10 +28,6 @@ const facts = [
         text: "Kings XI Punjab (KXIP) are one of the three IPL sides to have not won the IPL so far. Interestingly, they are also the team to have had most captains so far 11."
     },
     {
-        title:"Only two Indians to have won MVP award",
-        text: "The Indian Premier League is 11 years old now, and only two Indian players have so far won the Most Valuable Player award. First one S.Tendulkar and second V.Kholi"
-    },
-    {
         title:"Never Missed a Match",
         text: " CSK’s Suresh Raina is the only player to have not missed a single match for his franchise starting from the first season."
     }
