@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
@@ -132,6 +131,7 @@ export default class Sidebar extends React.Component {
           <a
             href={logo.outterLink}
             className="simple-text logo-mini"
+            rel="noopener noreferrer"
             target="_blank"
             onClick={this.props.closeSidebar}
           >
@@ -145,6 +145,7 @@ export default class Sidebar extends React.Component {
             href={logo.outterLink}
             className="simple-text logo-normal"
             target="_blank"
+            rel="noopener noreferrer"
             onClick={this.props.closeSidebar}
           >
             {logo.text}

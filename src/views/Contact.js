@@ -1,19 +1,5 @@
 import React from "react";
 // react plugin used to create charts
-import { Line, Bar, Pie } from "react-chartjs-2";
-// reactstrap components
-import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
-
-// core components
-import {
-  chartExample5,
-  chartExample6,
-  chartExample7,
-  chartExample8,
-  chartExample9,
-  chartExample10
-} from "variables/charts.js";
-
 class Charts extends React.Component {
   render() {
     return (

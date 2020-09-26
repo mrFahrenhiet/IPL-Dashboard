@@ -11,14 +11,10 @@ import {
   CardHeader,
   CardBody,
   CardTitle,
-  Label,
-  FormGroup,
-  Input,
   Progress,
   Table,
   Row,
-  Col,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
 
 // core components

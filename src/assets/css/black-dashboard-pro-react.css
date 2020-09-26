@@ -1,5 +1,21 @@
 @charset "UTF-8";
+/*!
 
+ =========================================================
+ * Black Dashboard Pro - v1.1.1
+ =========================================================
+
+ * Product Page: https://themes.getbootstrap.com/product/black-dashboard-pro-premium-bootstrap-4-admin/
+ * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+/*     brand Colors              */
+/* navbar color */
 :root {
   --blue: #5e72e4;
   --indigo: #5603ad;

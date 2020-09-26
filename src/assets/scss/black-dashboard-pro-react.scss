@@ -1,3 +1,21 @@
+/*!
+
+ =========================================================
+ * Black Dashboard Pro - v1.1.1
+ =========================================================
+
+ * Product Page: https://themes.getbootstrap.com/product/black-dashboard-pro-premium-bootstrap-4-admin/
+ * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+ // Core
+
 @import "black-dashboard-pro-react/custom/functions";
 @import "black-dashboard-pro-react/bootstrap/functions";
 
@@ -7,6 +25,7 @@
 @import "black-dashboard-pro-react/custom/mixins";
 @import "black-dashboard-pro-react/bootstrap/mixins";
 
+ // Bootstrap components
 
 @import "black-dashboard-pro-react/bootstrap/root";
 @import "black-dashboard-pro-react/bootstrap/reboot";
@@ -94,9 +113,13 @@
 @import "black-dashboard-pro-react/custom/vendor/plugin-card-wizard.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-chartjs.scss";
 
+// example pages and sections
 
 @import "black-dashboard-pro-react/custom/example-pages.scss";
 
+// light mode
+
+@import "black-dashboard-pro-react/custom/white-content.scss";
 
 // Cards
 
@@ -118,4 +141,5 @@
 @import "black-dashboard-pro-react/custom/cards/card-testimonials";
 @import "black-dashboard-pro-react/custom/cards/card-wizard";
 
+// React Differences
 @import "black-dashboard-pro-react/react/react-differences";
