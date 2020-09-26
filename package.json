@@ -1,6 +1,6 @@
 {
-  "name": "black-dashboard-pro-react",
-  "version": "1.1.0",
+  "name": "ipl-dashboard",
+  "version": "1.0.0",
   "private": true,
   "homepage": "http://mrFahrenhiet.github.io/IPL-Dashboard",
   "dependencies": {

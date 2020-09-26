@@ -1,5 +1,7 @@
 const data = require("../data/data.json");
 
+
+// Data Pre-processing
 const teams = [];
 for(let itm in data) {
     if(teams.indexOf(data[itm].team1)===-1) {
@@ -83,7 +85,7 @@ seasons.forEach(s=>{
 
 
 
-
+// Chart Data
 const chart_1_2_3_options = {
   maintainAspectRatio: false,
   legend: {

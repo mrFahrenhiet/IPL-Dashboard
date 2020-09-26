@@ -17,7 +17,7 @@ import {
   Col
 } from "reactstrap";
 
-// core components
+// Data Dependencies
 import { 
   chart1,
   teams,
