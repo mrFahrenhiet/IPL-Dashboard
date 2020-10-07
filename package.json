@@ -28,7 +28,8 @@
     "react-select": "3.0.8",
     "react-table": "6.11.5",
     "react-tagsinput": "3.19.0",
-    "reactstrap": "8.4.1"
+    "reactstrap": "8.4.1",
+    "resolve-url-loader": "^3.1.1"
   },
   "optionalDependencies": {
     "@types/googlemaps": "3.39.3",

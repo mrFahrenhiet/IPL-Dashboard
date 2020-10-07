@@ -25,7 +25,7 @@
 @import "black-dashboard-pro-react/custom/mixins";
 @import "black-dashboard-pro-react/bootstrap/mixins";
 
- // Bootstrap components
+//  // Bootstrap components
 
 @import "black-dashboard-pro-react/bootstrap/root";
 @import "black-dashboard-pro-react/bootstrap/reboot";
@@ -60,7 +60,7 @@
 @import "black-dashboard-pro-react/bootstrap/utilities";
 @import "black-dashboard-pro-react/bootstrap/print";
 
- // Custom components
+//  // Custom components
 
  @import "black-dashboard-pro-react/custom/reboot.scss";
  @import "black-dashboard-pro-react/custom/global.scss";
@@ -96,7 +96,7 @@
  @import "black-dashboard-pro-react/custom/rtl.scss";
  @import "black-dashboard-pro-react/custom/timeline.scss";
 
- // Vendor / Plugins
+//  // Vendor / Plugins
 
 @import "black-dashboard-pro-react/custom/vendor/plugin-datetimepicker.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-nouislider.scss";
@@ -113,15 +113,15 @@
 @import "black-dashboard-pro-react/custom/vendor/plugin-card-wizard.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-chartjs.scss";
 
-// example pages and sections
+// // example pages and sections
 
 @import "black-dashboard-pro-react/custom/example-pages.scss";
 
-// light mode
+// // light mode
 
-@import "black-dashboard-pro-react/custom/white-content.scss";
+// @import "black-dashboard-pro-react/custom/white-content.scss";
 
-// Cards
+// // Cards
 
 @import 'black-dashboard-pro-react/custom/card';
 @import "black-dashboard-pro-react/custom/cards/card-chart";

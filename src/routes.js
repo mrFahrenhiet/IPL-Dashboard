@@ -1,4 +1,4 @@
-import Charts from "views/Contact.js";
+import Contact from "views/Contact.js";
 import Dashboard from "views/Dashboard.js";
 
 
@@ -14,7 +14,7 @@ const routes = [
     path: "/contact",
     name: "Contact Us",
     icon: "tim-icons icon-chat-33",
-    component: Charts,
+    component: Contact,
     layout: "/index"
   }
 ];
