@@ -20,7 +20,9 @@ export default class Index extends React.Component {
     sidebarOpened: false
   };
   componentDidMount() {
+    // Check if you are using Windows or Not
     if (navigator.platform.indexOf("Win") > -1) {
+      // if windows OS then set MacOs scrollbar
       document.documentElement.classList.add("perfect-scrollbar-on");
       document.documentElement.classList.remove("perfect-scrollbar-off");
       ps = new PerfectScrollbar(this.refs.mainPanel);
@@ -77,9 +79,6 @@ export default class Index extends React.Component {
   };
   getRoutes = routes => {
     return routes.map((prop, key) => {
-      if (prop.collapse) {
-        return this.getRoutes(prop.views);
-      }
       if (prop.layout === "/index") {
         return (
           <Route
@@ -96,20 +95,13 @@ export default class Index extends React.Component {
   getActiveRoute = routes => {
     let activeRoute = "Default Brand Text";
     for (let i = 0; i < routes.length; i++) {
-      if (routes[i].collapse) {
-        let collapseActiveRoute = this.getActiveRoute(routes[i].views);
-        if (collapseActiveRoute !== activeRoute) {
-          return collapseActiveRoute;
-        }
-      } else {
-        if (
+      if (
           window.location.pathname.indexOf(
             routes[i].layout + routes[i].path
           ) !== -1
         ) {
           return routes[i].name;
         }
-      }
     }
     return activeRoute;
   };
