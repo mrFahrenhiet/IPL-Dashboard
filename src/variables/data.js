@@ -73,7 +73,7 @@ let dl = {};
 for(let i in data) {
   if(dl[data[i]["season"]]===undefined || isNaN(dl[data[i]["season"]]))
     dl[data[i]["season"]] = 0;
-  else 
+  else if(data[i].dl_applied===1)
     dl[data[i]["season"]]++
 }
 let ld = [];
@@ -500,8 +500,8 @@ const chart6 = {
             zeroLineColor: "transparent"
           },
           ticks: {
-            suggestedMin: 10,
-            suggestedMax: 90,
+            suggestedMin: 0,
+            suggestedMax: 5,
             padding: 20,
             fontColor: "#9e9e9e"
           }
