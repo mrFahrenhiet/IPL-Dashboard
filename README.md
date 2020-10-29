@@ -69,6 +69,7 @@ ipl-dashboard-react
 <img src="./SS/Screenshot (402).png">
 <img src="./SS/Screenshot (403).png">
 <img src="./SS/Screenshot (404).png">
+
 ## Browser Support
 
 At present, we officially aim to support the last two versions of the following browsers:
