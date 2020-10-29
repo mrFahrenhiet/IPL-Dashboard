@@ -1,17 +1,16 @@
 # IPL Dashboard
 
 IPL Dashboard is a dashboard display amazing statistical and not statistical facts, trivia, and visualization for IPL. The Dashboard uses various data analytics techniques to get visualizations and facts from the given dataset. Some facts were also taken from the internet, which were non-statistical.
+
 ### FrontEnd Framework Used:
  ReactJs
+ 
 ## Main Liberaries Used:
 
 * Chart.js (react-chartsjs-2) --> Used to create charts and visualizations
 * reactstrap --> Used to import bootstrap components on react
 * classnames --> For dynamic and making conditional classnames 
 * perfect-scrollbar --> For getting a scroll bar like macbook in windows
-
-## Bonus point covered:
-* Mobile Responsive
 
 ## File Structure
 
@@ -65,7 +64,8 @@ ipl-dashboard-react
         ├── Dashboard.jsx
         ├── Contact.jsx
 ```
-
+## Screenshots
+<img src="./SS/Screenshot (401).png">
 ## Browser Support
 
 At present, we officially aim to support the last two versions of the following browsers:
