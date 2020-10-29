@@ -65,7 +65,10 @@ ipl-dashboard-react
         ├── Contact.jsx
 ```
 ## Screenshots
-<img src="./SS/Screenshot (401).png">
+<img src="./SS/Screenshot (401).png" width="200" height="200">
+<img src="./SS/Screenshot (402).png" width="200" height="200">
+<img src="./SS/Screenshot (403).png" width="200" height="200">
+<img src="./SS/Screenshot (404).png" width="200" height="200">
 ## Browser Support
 
 At present, we officially aim to support the last two versions of the following browsers:
