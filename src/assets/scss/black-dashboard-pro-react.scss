@@ -1,20 +1,4 @@
-/*!
-
- =========================================================
- * Black Dashboard Pro - v1.1.1
- =========================================================
-
- * Product Page: https://themes.getbootstrap.com/product/black-dashboard-pro-premium-bootstrap-4-admin/
- * Copyright 2020 Creative Tim (http://www.creative-tim.com)
-
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-
- // Core
+// // Core
 
 @import "black-dashboard-pro-react/custom/functions";
 @import "black-dashboard-pro-react/bootstrap/functions";
@@ -25,7 +9,7 @@
 @import "black-dashboard-pro-react/custom/mixins";
 @import "black-dashboard-pro-react/bootstrap/mixins";
 
-//  // Bootstrap components
+// // Bootstrap components
 
 @import "black-dashboard-pro-react/bootstrap/root";
 @import "black-dashboard-pro-react/bootstrap/reboot";
@@ -60,7 +44,7 @@
 @import "black-dashboard-pro-react/bootstrap/utilities";
 @import "black-dashboard-pro-react/bootstrap/print";
 
-//  // Custom components
+// // Custom components
 
  @import "black-dashboard-pro-react/custom/reboot.scss";
  @import "black-dashboard-pro-react/custom/global.scss";
@@ -96,32 +80,23 @@
  @import "black-dashboard-pro-react/custom/rtl.scss";
  @import "black-dashboard-pro-react/custom/timeline.scss";
 
-//  // Vendor / Plugins
+// //  // Vendor / Plugins
 
-@import "black-dashboard-pro-react/custom/vendor/plugin-datetimepicker.scss";
-@import "black-dashboard-pro-react/custom/vendor/plugin-nouislider.scss";
-@import "black-dashboard-pro-react/custom/vendor/plugin-fullcalendar.scss";
-@import "black-dashboard-pro-react/custom/vendor/plugin-sweetalert2.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-bootstrap-switch.scss";
-@import "black-dashboard-pro-react/custom/vendor/plugin-bootstrap-select.scss";
+@import "black-dashboard-pro-react/custom/vendor/plugin-bootstrap-select.scss"; 
 @import "black-dashboard-pro-react/custom/vendor/plugin-jasny-fileupload.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-tagsinput.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-perfect-scrollbar.scss";
-@import "black-dashboard-pro-react/custom/vendor/plugin-jquery.jvectormap.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-datatables.net.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-animate-bootstrap-notify.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-card-wizard.scss";
 @import "black-dashboard-pro-react/custom/vendor/plugin-chartjs.scss";
 
-// // example pages and sections
+// // // light mode
 
-@import "black-dashboard-pro-react/custom/example-pages.scss";
+// // @import "black-dashboard-pro-react/custom/white-content.scss";
 
-// // light mode
-
-// @import "black-dashboard-pro-react/custom/white-content.scss";
-
-// // Cards
+// // // Cards
 
 @import 'black-dashboard-pro-react/custom/card';
 @import "black-dashboard-pro-react/custom/cards/card-chart";
@@ -141,5 +116,5 @@
 @import "black-dashboard-pro-react/custom/cards/card-testimonials";
 @import "black-dashboard-pro-react/custom/cards/card-wizard";
 
-// React Differences
+// // React Differences
 @import "black-dashboard-pro-react/react/react-differences";
